@@ -10,6 +10,4 @@ data/
 
 .streamlit/secrets.toml
 
-X_test.csv
-y_test.csv
 shap_values.npy
