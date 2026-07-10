@@ -1,0 +1,17 @@
+feature,mean_abs_shap
+Age,0.5162836
+InterestRate,0.40328696
+MonthsEmployed,0.2927402
+Income,0.2761042
+LoanAmount,0.24303582
+HasCoSigner,0.12551765
+HasDependents,0.12141305
+EmploymentType,0.11213646
+CreditScore,0.11045783
+NumCreditLines,0.09565614
+Education,0.09247612
+HasMortgage,0.07582661
+DTIRatio,0.06504007
+MaritalStatus,0.064579315
+LoanPurpose,0.05515585
+LoanTerm,0.0072100693

@@ -1,0 +1,230 @@
+[
+  {
+    "row_index": 8,
+    "predicted_default_probability": 0.764511227607727,
+    "actual_label": 1,
+    "base_value": 0.0155887296423316,
+    "top_contributions": [
+      {
+        "feature": "Age",
+        "value": 18.0,
+        "shap_impact": 0.8101277351379395
+      },
+      {
+        "feature": "Income",
+        "value": 112573.0,
+        "shap_impact": -0.3617287278175354
+      },
+      {
+        "feature": "MonthsEmployed",
+        "value": 23.0,
+        "shap_impact": 0.3288976848125458
+      },
+      {
+        "feature": "LoanAmount",
+        "value": 239768.0,
+        "shap_impact": 0.3138103783130646
+      },
+      {
+        "feature": "InterestRate",
+        "value": 10.52,
+        "shap_impact": -0.20547254383563995
+      },
+      {
+        "feature": "EmploymentType",
+        "value": "Unemployed",
+        "shap_impact": 0.17036102712154388
+      }
+    ]
+  },
+  {
+    "row_index": 12,
+    "predicted_default_probability": 0.7519915699958801,
+    "actual_label": 1,
+    "base_value": 0.0155887296423316,
+    "top_contributions": [
+      {
+        "feature": "Income",
+        "value": 24849.0,
+        "shap_impact": 0.9397803544998169
+      },
+      {
+        "feature": "LoanAmount",
+        "value": 246658.0,
+        "shap_impact": 0.6362189650535583
+      },
+      {
+        "feature": "MonthsEmployed",
+        "value": 102.0,
+        "shap_impact": -0.4858216345310211
+      },
+      {
+        "feature": "InterestRate",
+        "value": 11.33,
+        "shap_impact": -0.2133779525756836
+      },
+      {
+        "feature": "EmploymentType",
+        "value": "Unemployed",
+        "shap_impact": 0.15697650611400604
+      },
+      {
+        "feature": "CreditScore",
+        "value": 732.0,
+        "shap_impact": -0.15432478487491608
+      }
+    ]
+  },
+  {
+    "row_index": 26,
+    "predicted_default_probability": 0.7927607297897339,
+    "actual_label": 1,
+    "base_value": 0.0155887296423316,
+    "top_contributions": [
+      {
+        "feature": "Age",
+        "value": 25.0,
+        "shap_impact": 0.6185081005096436
+      },
+      {
+        "feature": "InterestRate",
+        "value": 20.35,
+        "shap_impact": 0.3994043469429016
+      },
+      {
+        "feature": "LoanAmount",
+        "value": 240217.0,
+        "shap_impact": 0.37008145451545715
+      },
+      {
+        "feature": "MonthsEmployed",
+        "value": 80.0,
+        "shap_impact": -0.2481292188167572
+      },
+      {
+        "feature": "CreditScore",
+        "value": 320.0,
+        "shap_impact": 0.19481182098388672
+      },
+      {
+        "feature": "HasCoSigner",
+        "value": "Yes",
+        "shap_impact": -0.15708252787590027
+      }
+    ]
+  },
+  {
+    "row_index": 0,
+    "predicted_default_probability": 0.2636471092700958,
+    "actual_label": 0,
+    "base_value": 0.0155887296423316,
+    "top_contributions": [
+      {
+        "feature": "Income",
+        "value": 20956.0,
+        "shap_impact": 0.7984045147895813
+      },
+      {
+        "feature": "Age",
+        "value": 54.0,
+        "shap_impact": -0.49121183156967163
+      },
+      {
+        "feature": "MonthsEmployed",
+        "value": 102.0,
+        "shap_impact": -0.44993913173675537
+      },
+      {
+        "feature": "InterestRate",
+        "value": 8.99,
+        "shap_impact": -0.35617539286613464
+      },
+      {
+        "feature": "LoanAmount",
+        "value": 87156.0,
+        "shap_impact": -0.3062768578529358
+      },
+      {
+        "feature": "EmploymentType",
+        "value": "Full-time",
+        "shap_impact": -0.21738673746585846
+      }
+    ]
+  },
+  {
+    "row_index": 1,
+    "predicted_default_probability": 0.11843466758728027,
+    "actual_label": 0,
+    "base_value": 0.0155887296423316,
+    "top_contributions": [
+      {
+        "feature": "InterestRate",
+        "value": 2.46,
+        "shap_impact": -0.9865642189979553
+      },
+      {
+        "feature": "Income",
+        "value": 138499.0,
+        "shap_impact": -0.5415865182876587
+      },
+      {
+        "feature": "MonthsEmployed",
+        "value": 102.0,
+        "shap_impact": -0.3939026892185211
+      },
+      {
+        "feature": "EmploymentType",
+        "value": "Full-time",
+        "shap_impact": -0.33855515718460083
+      },
+      {
+        "feature": "LoanAmount",
+        "value": 227279.0,
+        "shap_impact": 0.2810470759868622
+      },
+      {
+        "feature": "Age",
+        "value": 49.0,
+        "shap_impact": -0.23527225852012634
+      }
+    ]
+  },
+  {
+    "row_index": 2,
+    "predicted_default_probability": 0.2948864698410034,
+    "actual_label": 0,
+    "base_value": 0.0155887296423316,
+    "top_contributions": [
+      {
+        "feature": "Age",
+        "value": 69.0,
+        "shap_impact": -1.1774471998214722
+      },
+      {
+        "feature": "LoanAmount",
+        "value": 48532.0,
+        "shap_impact": -0.675896167755127
+      },
+      {
+        "feature": "Income",
+        "value": 22538.0,
+        "shap_impact": 0.5241130590438843
+      },
+      {
+        "feature": "CreditScore",
+        "value": 337.0,
+        "shap_impact": 0.17513002455234528
+      },
+      {
+        "feature": "Education",
+        "value": "High School",
+        "shap_impact": 0.14711959660053253
+      },
+      {
+        "feature": "HasDependents",
+        "value": "Yes",
+        "shap_impact": -0.13272075355052948
+      }
+    ]
+  }
+]
