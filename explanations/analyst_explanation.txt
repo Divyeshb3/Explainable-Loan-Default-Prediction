@@ -1,0 +1,3 @@
+Verdict: High-risk applicant
+Risk Drivers: Age, MonthsEmployed, LoanAmount, and EmploymentType increase risk, while Income and InterestRate decrease risk
+Recommendation: Reject or revise loan terms due to high predicted default probability
