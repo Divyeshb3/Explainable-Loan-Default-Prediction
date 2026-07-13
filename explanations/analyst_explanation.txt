@@ -1,3 +1,9 @@
-Verdict: High-risk applicant
-Risk Drivers: Age, MonthsEmployed, LoanAmount, and EmploymentType increase risk, while Income and InterestRate decrease risk
-Recommendation: Reject or revise loan terms due to high predicted default probability
+Verdict: High risk
+Risk Drivers:
+- Age: 18.0, increased risk
+- Income: 112573.0, decreased risk
+- MonthsEmployed: 23.0, increased risk
+- LoanAmount: 239768.0, increased risk
+- InterestRate: 10.52, decreased risk
+- EmploymentType: Unemployed, increased risk
+Recommendation: Decline loan application

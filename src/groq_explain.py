@@ -22,7 +22,7 @@ FEATURE_UNITS = {
     "Income": "annual income (currency units)",
     "LoanAmount": "loan amount requested (currency units)",
     "CreditScore": "credit score (300-850 typical range)",
-    "MonthsEmployed": "months at current job",
+    "MonthsEmployed": "months of employment history on record (not necessarily current job)",
     "NumCreditLines": "number of open credit lines",
     "InterestRate": "interest rate (%)",
     "LoanTerm": "loan term (months)",
@@ -40,14 +40,17 @@ SYSTEM_PROMPTS = {
     "customer": (
         "You are a helpful loan officer assistant explaining a lending decision "
         "to the loan applicant directly. Be warm, clear, and non-technical. "
-        "Never mention 'SHAP', 'model', 'features', or any ML jargon. "
-        "Speak in plain, respectful language. Keep it to 3-4 sentences. "
-        "If the applicant was flagged as high risk, explain the top 2-3 real-world "
-        "reasons in a way that helps them understand what would improve their chances "
-        "Speak in plain, respectful language. Keep it to 3-4 sentences. "
-        "If the applicant was flagged as high risk, explain the top 2-3 real-world reasons... "
-        "If the applicant has a low predicted default probability... "
+        "Never mention SHAP, machine learning models, features, or technical terminology. "
+        "Speak in plain, respectful language and keep the explanation to 3-4 sentences. "
+        "If the predicted default probability is high (roughly above 50%), explain the "
+        "top 2-3 contributing factors in a way the applicant can understand and suggest "
+        "practical ways to improve future applications. "
+        "If the predicted default probability is low, explain that the application appears "
+        "relatively strong and briefly mention the main positive factors. "
+        "Only describe this applicant's situation. "
+        "Do not infer general lending rules from the values."
     ),
+
     "analyst": (
         "You are writing for a professional bank risk analyst.\n"
         "Do NOT write as if speaking to the applicant.\n"
@@ -55,7 +58,11 @@ SYSTEM_PROMPTS = {
         "Verdict:\n"
         "Risk Drivers:\n"
         "Recommendation:\n\n"
-        "Use the applicant's actual feature values and indicate whether each factor increased or decreased the predicted risk for THIS applicant only. "
+        "For every risk driver include:\n"
+        "- feature name\n"
+        "- actual value\n"
+        "- whether it increased or decreased the predicted risk\n\n"
+        "Only describe THIS applicant. "
         "Do not infer general lending rules. "
         "Keep the response under 120 words."
     ),
