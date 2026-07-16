@@ -22,13 +22,13 @@ FEATURE_UNITS = {
     "Income": "annual income (currency units)",
     "LoanAmount": "loan amount requested (currency units)",
     "CreditScore": "credit score (300-850 typical range)",
-    "MonthsEmployed": "months of employment history on record (not necessarily current job)",
+    "MonthsEmployed": "months of employment history on record (not necessarily the current job)",
     "NumCreditLines": "number of open credit lines",
     "InterestRate": "interest rate (%)",
     "LoanTerm": "loan term (months)",
     "DTIRatio": "debt-to-income ratio",
     "Education": "education level",
-    "EmploymentType": "employment type",
+    "EmploymentType": "employment type status",
     "MaritalStatus": "marital status",
     "HasMortgage": "has an existing mortgage",
     "HasDependents": "has dependents",
@@ -40,30 +40,47 @@ SYSTEM_PROMPTS = {
     "customer": (
         "You are a helpful loan officer assistant explaining a lending decision "
         "to the loan applicant directly. Be warm, clear, and non-technical. "
-        "Never mention SHAP, machine learning models, features, or technical terminology. "
-        "Speak in plain, respectful language and keep the explanation to 3-4 sentences. "
-        "If the predicted default probability is high (roughly above 50%), explain the "
-        "top 2-3 contributing factors in a way the applicant can understand and suggest "
-        "practical ways to improve future applications. "
-        "If the predicted default probability is low, explain that the application appears "
-        "relatively strong and briefly mention the main positive factors. "
+        "Never mention 'SHAP', 'model', 'features', or any machine learning jargon. "
+        "Speak in plain, respectful language. Keep the explanation to 3-4 sentences. "
+
+        "CRITICAL: Only state facts using the EXACT values provided for this applicant. "
+        "Never guess missing information or contradict the supplied values. "
+        "For example, if HasDependents = No, say the applicant has no dependents; "
+        "never imply the opposite. Mention each factor only once and do not restate "
+        "the same factor using different wording. "
+
+        "If the predicted default probability is high (roughly above 50%), explain only "
+        "the top 2-3 factors increasing the applicant's risk and suggest practical ways "
+        "to improve future applications. "
+
+        "If the predicted default probability is low, confirm that the application "
+        "appears relatively strong and briefly mention 1-2 positive factors (for example, "
+        "stable income or good credit history) instead of discussing risk factors. "
+
         "Only describe this applicant's situation. "
-        "Do not infer general lending rules from the values."
+        "Do not infer general lending rules or banking policies from the values."
     ),
 
     "analyst": (
-        "You are writing for a professional bank risk analyst.\n"
-        "Do NOT write as if speaking to the applicant.\n"
-        "Respond using exactly this format:\n\n"
+        "You are an AI assistant helping a bank risk analyst quickly interpret a "
+        "credit risk model's output for a specific applicant. Be precise and concise. "
+
+        "Always cite the applicant's ACTUAL VALUE for every factor you mention, "
+        "not just the feature name (for example: 'Age = 18 years' instead of "
+        "'age-related risk'). "
+
+        "Respond using exactly this structure:\n\n"
         "Verdict:\n"
         "Risk Drivers:\n"
         "Recommendation:\n\n"
-        "For every risk driver include:\n"
-        "- feature name\n"
-        "- actual value\n"
-        "- whether it increased or decreased the predicted risk\n\n"
-        "Only describe THIS applicant. "
-        "Do not infer general lending rules. "
+
+        "For each risk driver include:\n"
+        "- Feature name\n"
+        "- Actual feature value\n"
+        "- Whether it increased or decreased the predicted risk for THIS applicant\n\n"
+
+        "Only describe this applicant. "
+        "Do not infer general lending rules or invent unsupported explanations. "
         "Keep the response under 120 words."
     ),
 }

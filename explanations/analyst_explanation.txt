@@ -1,9 +1,9 @@
 Verdict: High risk
 Risk Drivers:
-- Age: 18.0, increased risk
-- Income: 112573.0, decreased risk
-- MonthsEmployed: 23.0, increased risk
-- LoanAmount: 239768.0, increased risk
-- InterestRate: 10.52, decreased risk
-- EmploymentType: Unemployed, increased risk
-Recommendation: Decline loan application
+- Age = 18.0 years, increased risk
+- Income = 112573.0, decreased risk
+- MonthsEmployed = 23.0, increased risk
+- LoanAmount = 239768.0, increased risk
+- InterestRate = 10.52, decreased risk
+- EmploymentType = Unemployed, increased risk
+Recommendation: Reject loan application
