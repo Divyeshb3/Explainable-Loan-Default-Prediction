@@ -1,0 +1,29 @@
+{
+  "roc_auc": 0.7582,
+  "test_set_size": 51070,
+  "test_set_default_rate": 0.1161,
+  "threshold_0.5": {
+    "threshold_label": "default (0.5)",
+    "precision_default_class": 0.2303,
+    "recall_default_class": 0.6808,
+    "f1_default_class": 0.3442,
+    "confusion_matrix": {
+      "true_negative": 31645,
+      "false_positive": 13494,
+      "false_negative": 1893,
+      "true_positive": 4038
+    }
+  },
+  "threshold_tuned": {
+    "threshold_label": "F1-optimal (0.634)",
+    "precision_default_class": 0.3083,
+    "recall_default_class": 0.4795,
+    "f1_default_class": 0.3753,
+    "confusion_matrix": {
+      "true_negative": 38758,
+      "false_positive": 6381,
+      "false_negative": 3087,
+      "true_positive": 2844
+    }
+  }
+}
