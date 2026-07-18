@@ -1,0 +1,706 @@
+{
+  "n_examples": 25,
+  "n_evaluations": 50,
+  "overall": {
+    "faithfulness": 0.901,
+    "direction_correctness": 0.94,
+    "clarity": 0.942,
+    "consistency": 1.0
+  },
+  "customer_audience": {
+    "faithfulness": 0.826,
+    "direction_correctness": 0.88,
+    "clarity": 0.904,
+    "consistency": 1.0
+  },
+  "analyst_audience": {
+    "faithfulness": 0.976,
+    "direction_correctness": 1.0,
+    "clarity": 0.98,
+    "consistency": 1.0
+  },
+  "issues_flagged": [
+    {
+      "row_index": 32193,
+      "audience": "customer",
+      "issue": "Explanation omits some factors present in SHAP data, such as InterestRate and CreditScore."
+    },
+    {
+      "row_index": 16083,
+      "audience": "customer",
+      "issue": "The explanation omits the positive impact of 'NumCreditLines' and the negative impacts of 'EmploymentType' and 'Income', which are present in the SHAP data."
+    },
+    {
+      "row_index": 34684,
+      "audience": "customer",
+      "issue": "The explanation omits some factors present in the SHAP data, such as InterestRate and HasCoSigner, and incorrectly states the MonthsEmployed value as 12 months when it is actually 12 months employed, which is a relatively short period."
+    },
+    {
+      "row_index": 23265,
+      "audience": "customer",
+      "issue": "The explanation omits some factors present in the SHAP data, such as LoanAmount, HasDependents, MonthsEmployed, and HasCoSigner, which are actually decreasing the risk."
+    },
+    {
+      "row_index": 2036,
+      "audience": "customer",
+      "issue": "The explanation omits factors that decrease risk, such as Income, Age, and DTIRatio, which are present in the SHAP data."
+    },
+    {
+      "row_index": 32199,
+      "audience": "customer",
+      "issue": "Explanation mentions 'stable income' and 'age' as decreasing risk, which is correct, but also mentions '5 months of employment history' as a factor without clearly stating its impact as increasing risk."
+    },
+    {
+      "row_index": 32199,
+      "audience": "analyst",
+      "issue": "The explanation does not mention all top contributions from the SHAP data."
+    },
+    {
+      "row_index": 31082,
+      "audience": "customer",
+      "issue": "The explanation does not mention the interest rate and the presence of a co-signer, which are also significant factors in the SHAP data."
+    },
+    {
+      "row_index": 33987,
+      "audience": "customer",
+      "issue": "explanation mentions 'relatively short employment history of 12 months' which could be misleading as 12 months is not extremely short, and also omits factors that decrease risk such as LoanAmount and Age"
+    },
+    {
+      "row_index": 33987,
+      "audience": "analyst",
+      "issue": "Explanation omits factors with negative SHAP impact (LoanAmount and Age) that decrease risk."
+    },
+    {
+      "row_index": 42105,
+      "audience": "customer",
+      "issue": "Explanation incorrectly states that employment history, employment status, and interest rate increase the application's strength, when in fact they decrease the default risk, and also incorrectly implies that interest rate has a positive impact."
+    },
+    {
+      "row_index": 45617,
+      "audience": "customer",
+      "issue": "Explanation incorrectly states that the interest rate has a positive effect, when it actually decreases risk, and omits factors that increase risk."
+    },
+    {
+      "row_index": 3597,
+      "audience": "customer",
+      "issue": "Explanation incorrectly states that the interest rate has a positive effect on the application, when in fact it decreases risk, which is correct, but the SHAP data shows it as a negative impact, implying it decreases risk, and also omits other factors like CreditScore, Income, and LoanAmount."
+    },
+    {
+      "row_index": 15636,
+      "audience": "customer",
+      "issue": "explanation omits factors with negative SHAP impact, such as InterestRate and Income, which decrease risk"
+    },
+    {
+      "row_index": 15636,
+      "audience": "analyst",
+      "issue": "Explanation omits factors with negative SHAP impact, such as InterestRate and Income, which decrease risk."
+    },
+    {
+      "row_index": 19608,
+      "audience": "customer",
+      "issue": "The explanation does not mention InterestRate and Age, which have a negative SHAP impact, and also mentions 'high school education level' as a risk factor, while the SHAP data only provides its value without implying it's a concern by itself, but overall explanation is mostly faithful to the data."
+    },
+    {
+      "row_index": 32526,
+      "audience": "customer",
+      "issue": "The explanation incorrectly states that age, employment history, and credit score are positive factors, when in fact they decrease the predicted default probability according to the SHAP data."
+    },
+    {
+      "row_index": 10681,
+      "audience": "customer",
+      "issue": "The explanation omits factors with negative SHAP impact, such as Age and InterestRate, which decrease risk."
+    },
+    {
+      "row_index": 19485,
+      "audience": "customer",
+      "issue": "The explanation omits factors that increase risk, such as Income, and also does not mention other factors like InterestRate and HasDependents."
+    },
+    {
+      "row_index": 9612,
+      "audience": "customer",
+      "issue": "Explanation incorrectly states that high credit score decreases risk, when in fact it has a negative SHAP impact, and also incorrectly implies that loan amount decreases risk, when it actually has a negative SHAP impact indicating it decreases risk, which is correct but the explanation of credit score is incorrect."
+    },
+    {
+      "row_index": 47768,
+      "audience": "customer",
+      "issue": "The explanation does not mention the LoanAmount feature, which has a positive SHAP impact, and also does not mention the DTIRatio feature."
+    },
+    {
+      "row_index": 5894,
+      "audience": "customer",
+      "issue": "The explanation does not mention the 'Age' factor, which has a significant negative SHAP impact, and incorrectly implies that all factors mentioned are increasing risk, when in fact 'Age' decreases risk."
+    },
+    {
+      "row_index": 51059,
+      "audience": "customer",
+      "issue": "The explanation does not mention all factors present in the SHAP data, such as InterestRate and LoanPurpose, and also omits HasDependents which has a positive SHAP impact."
+    },
+    {
+      "row_index": 49393,
+      "audience": "customer",
+      "issue": "explanation omits factors that decrease risk, such as Income and Education, and also omits InterestRate which increases risk"
+    },
+    {
+      "row_index": 49393,
+      "audience": "analyst",
+      "issue": "Explanation omits factors with negative SHAP impact, such as Income and Education, which decrease risk."
+    },
+    {
+      "row_index": 45435,
+      "audience": "customer",
+      "issue": "The explanation omits some factors present in the SHAP data, such as LoanAmount, HasCoSigner, and NumCreditLines."
+    }
+  ],
+  "raw_scores": [
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "Explanation omits some factors present in SHAP data, such as InterestRate and CreditScore.",
+      "row_index": 32193,
+      "audience": "customer",
+      "predicted_probability": 0.4202935993671417,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 42.0%, which is significantly higher than the base default rate. A few factors are working in your favor, such as your age, which is 63 years, and your stable employment as a full-time worker, both of which decrease your risk. Additionally, your annual income of 113,423 also helps to decrease your risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 32193,
+      "audience": "analyst",
+      "predicted_probability": 0.4202935993671417,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 42.0%.\nRisk Drivers:\n- Age = 63.0 years, decreases risk\n- InterestRate = 24.65%, increases risk\n- MonthsEmployed = 19.0 months, increases risk\n- Income = 113423.0, decreases risk\n- EmploymentType = Full-time, decreases risk\n- CreditScore = 435.0, increases risk\nRecommendation: \nReject the loan application due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation omits the positive impact of 'NumCreditLines' and the negative impacts of 'EmploymentType' and 'Income', which are present in the SHAP data.",
+      "row_index": 16083,
+      "audience": "customer",
+      "predicted_probability": 0.6872379183769226,
+      "generated_explanation": "The predicted default probability for your loan application is 68.7%, which is higher than the average default rate. The main factors increasing your risk are the large loan amount of 242337.0, which is a significant request, and your relatively short employment history of 29 months. Additionally, your age of 36 also contributes to the increased risk. To improve your chances in the future, you may want to consider reducing the loan amount or building a longer employment history."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 16083,
+      "audience": "analyst",
+      "predicted_probability": 0.6872379183769226,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 68.7%.\nRisk Drivers:\n- LoanAmount = 242337.0, increases risk\n- MonthsEmployed = 29.0, increases risk\n- Age = 36.0, increases risk\n- NumCreditLines = 4.0, increases risk\nRecommendation:\nDecline the loan due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation omits some factors present in the SHAP data, such as InterestRate and HasCoSigner, and incorrectly states the MonthsEmployed value as 12 months when it is actually 12 months employed, which is a relatively short period.",
+      "row_index": 34684,
+      "audience": "customer",
+      "predicted_probability": 0.6313984394073486,
+      "generated_explanation": "Given your predicted default probability of 63.1%, which is significantly higher than the average, there are a few key factors that are increasing your risk. Your age of 19 years is a significant factor, as is your employment history of only 12 months and your current unemployed status. To improve your chances in future applications, it might be helpful to focus on establishing a longer and more stable employment record."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 34684,
+      "audience": "analyst",
+      "predicted_probability": 0.6313984394073486,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- Age = 19.0 years, increased risk\n- InterestRate = 7.7%, decreased risk\n- MonthsEmployed = 12.0 months, increased risk\n- HasCoSigner = Yes, decreased risk\n- EmploymentType = Unemployed, increased risk\n- NumCreditLines = 1.0, decreased risk\nRecommendation: Reject loan application"
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 37157,
+      "audience": "customer",
+      "predicted_probability": 0.1721784621477127,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 17.2%, which is still above the base default rate. A few factors are working in your favor, such as your stable employment history of 87 months and your annual income of 132870, which both suggest a lower risk. Additionally, your interest rate of 5.82% is also decreasing your risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 37157,
+      "audience": "analyst",
+      "predicted_probability": 0.1721784621477127,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 17.2%.\nRisk Drivers:\n- InterestRate = 5.82%, decreases risk\n- Age = 28.0 years, increases risk\n- LoanAmount = 36790.0, decreases risk\n- MonthsEmployed = 87.0, decreases risk\n- Income = 132870.0, decreases risk\n- CreditScore = 721.0, decreases risk\nRecommendation: \nReject or further review the loan application."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation omits some factors present in the SHAP data, such as LoanAmount, HasDependents, MonthsEmployed, and HasCoSigner, which are actually decreasing the risk.",
+      "row_index": 23265,
+      "audience": "customer",
+      "predicted_probability": 0.5410248041152954,
+      "generated_explanation": "Given your predicted default probability of 54.1%, which is higher than the base default rate, there are a few key factors that are increasing your risk. Your annual income of 23402.0 and your age of 30 are two factors that are contributing to this higher risk. To potentially improve your application in the future, you may want to consider increasing your income or waiting a bit longer to apply, as these factors seem to be impacting your current application."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 23265,
+      "audience": "analyst",
+      "predicted_probability": 0.5410248041152954,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 54.1%.\nRisk Drivers:\n- Income = 23402.0, increases risk\n- Age = 30.0, increases risk\n- LoanAmount = 37001.0, decreases risk\n- HasDependents = Yes, decreases risk\n- MonthsEmployed = 72.0, decreases risk\n- HasCoSigner = Yes, decreases risk\nRecommendation: \nReject the loan application due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation omits factors that decrease risk, such as Income, Age, and DTIRatio, which are present in the SHAP data.",
+      "row_index": 2036,
+      "audience": "customer",
+      "predicted_probability": 0.5827010869979858,
+      "generated_explanation": "Given your predicted default probability of 58.3%, there are a few key factors that are increasing your risk. Your relatively short employment history, at 3 months, and the interest rate of 18.51% are significant factors in this assessment. Additionally, not having a co-signer is also a factor that increases your risk. To improve your chances in future applications, you may want to consider building a longer employment history and exploring options for a lower interest rate, as well as potentially finding a co-signer."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 2036,
+      "audience": "analyst",
+      "predicted_probability": 0.5827010869979858,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- MonthsEmployed = 3.0, increased risk\n- InterestRate = 18.51, increased risk\n- Income = 83246.0, decreased risk\n- Age = 44.0, decreased risk\n- DTIRatio = 0.2, decreased risk\n- HasCoSigner = No, increased risk\nRecommendation: Reject or revise loan terms"
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 0.8,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "Explanation mentions 'stable income' and 'age' as decreasing risk, which is correct, but also mentions '5 months of employment history' as a factor without clearly stating its impact as increasing risk.",
+      "row_index": 32199,
+      "audience": "customer",
+      "predicted_probability": 0.19464917480945587,
+      "generated_explanation": "I'm happy to discuss your loan application with you. Your application appears relatively strong, with a predicted default probability of 19.5%, which is still above the base default rate. Two factors that are working in your favor are your stable income of $138,973 per year and your age of 68 years, both of which decrease your risk. Additionally, having only 5 months of employment history on record is a factor, but overall, your application looks good."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation does not mention all top contributions from the SHAP data.",
+      "row_index": 32199,
+      "audience": "analyst",
+      "predicted_probability": 0.19464917480945587,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 19.5%.\nRisk Drivers:\n- Age = 68.0 years, decreases risk\n- MonthsEmployed = 5.0 months, increases risk\n- Income = 138973.0, decreases risk\nRecommendation: \nMonitor this applicant closely due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.83,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation does not mention the interest rate and the presence of a co-signer, which are also significant factors in the SHAP data.",
+      "row_index": 31082,
+      "audience": "customer",
+      "predicted_probability": 0.27112525701522827,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 27.1%, which is still above the base default rate. A few factors are working in your favor, such as your stable employment history of 93 months and your full-time employment status, which suggest a reliable income stream. Additionally, your annual income of $75,309 and the fact that the loan is for a home also contribute to a more favorable assessment of your application."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 31082,
+      "audience": "analyst",
+      "predicted_probability": 0.27112525701522827,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 27.1%.\nRisk Drivers:\n- InterestRate = 5.09%, decreases risk\n- MonthsEmployed = 93.0, decreases risk\n- EmploymentType = Full-time, decreases risk\n- Income = 75309.0, decreases risk\n- LoanPurpose = Home, decreases risk\n- HasCoSigner = No, increases risk\nRecommendation: \nReject the loan application due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "explanation mentions 'relatively short employment history of 12 months' which could be misleading as 12 months is not extremely short, and also omits factors that decrease risk such as LoanAmount and Age",
+      "row_index": 33987,
+      "audience": "customer",
+      "predicted_probability": 0.6905410289764404,
+      "generated_explanation": "Given your predicted default probability of 69.1%, which is significantly higher than the average, we've identified a few key factors that are increasing your risk. The high interest rate of 22.2% and your relatively short employment history of 12 months are major contributors to this assessment. Additionally, your employment status as unemployed also plays a role in increasing your risk. To improve your chances in future applications, you may want to consider exploring options for more stable employment and potentially seeking loans with lower interest rates."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "Explanation omits factors with negative SHAP impact (LoanAmount and Age) that decrease risk.",
+      "row_index": 33987,
+      "audience": "analyst",
+      "predicted_probability": 0.6905410289764404,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- InterestRate = 22.2%, increases risk\n- MonthsEmployed = 12.0, increases risk\n- EmploymentType = Unemployed, increases risk\n- CreditScore = 317.0, increases risk\nRecommendation: Decline loan due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.5,
+      "direction_correctness": 0.0,
+      "clarity": 0.8,
+      "consistency": 1.0,
+      "issues_found": "Explanation incorrectly states that employment history, employment status, and interest rate increase the application's strength, when in fact they decrease the default risk, and also incorrectly implies that interest rate has a positive impact.",
+      "row_index": 42105,
+      "audience": "customer",
+      "predicted_probability": 0.4677775502204895,
+      "generated_explanation": "Your application appears relatively strong, with a predicted default probability of 46.8%, which is still below the midpoint. Two factors that contribute positively to your application are your stable employment history, with 80 months of employment on record, and your full-time employment status, both of which decrease your risk. Additionally, your interest rate of 10.17% also has a positive impact on your application, reducing your default risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 42105,
+      "audience": "analyst",
+      "predicted_probability": 0.4677775502204895,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 46.8%.\nRisk Drivers:\n- Income = 24236.0, increased risk\n- InterestRate = 10.17, decreased risk\n- MonthsEmployed = 80.0, decreased risk\n- EmploymentType = Full-time, decreased risk\n- MaritalStatus = Married, decreased risk\n- HasDependents = Yes, decreased risk\nRecommendation: Reject the loan application due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 0.8,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "Explanation incorrectly states that the interest rate has a positive effect, when it actually decreases risk, and omits factors that increase risk.",
+      "row_index": 45617,
+      "audience": "customer",
+      "predicted_probability": 0.2356937974691391,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 23.6%, which is still above the base default rate. A few factors are working in your favor, such as your age, which is 58 years, and the loan amount you've requested, $45,848, both of which decrease your risk. Additionally, the interest rate of 10.01% also has a positive effect on your application, reducing your risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 45617,
+      "audience": "analyst",
+      "predicted_probability": 0.2356937974691391,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- Age = 58.0 years, decreases risk\n- LoanAmount = 45848.0, decreases risk\n- InterestRate = 10.01, decreases risk\n- Income = 29307.0, increases risk\n- EmploymentType = Unemployed, increases risk\n- NumCreditLines = 4.0, increases risk\nRecommendation: Reject loan application"
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 0.6,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "Explanation incorrectly states that the interest rate has a positive effect on the application, when in fact it decreases risk, which is correct, but the SHAP data shows it as a negative impact, implying it decreases risk, and also omits other factors like CreditScore, Income, and LoanAmount.",
+      "row_index": 3597,
+      "audience": "customer",
+      "predicted_probability": 0.4470843970775604,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 44.7%, which is still below the midpoint. A few factors are working in your favor, such as your age, which is 65 years, and your employment history of 85 months, both of which decrease your risk. Additionally, the interest rate of 11.47% also has a positive effect on your application, reducing your risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 3597,
+      "audience": "analyst",
+      "predicted_probability": 0.4470843970775604,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- Age = 65.0 years, decreases risk\n- CreditScore = 334.0, increases risk\n- Income = 36049.0, increases risk\n- MonthsEmployed = 85.0, decreases risk\n- InterestRate = 11.47, decreases risk\n- LoanAmount = 169765.0, increases risk\nRecommendation: Reject loan application"
+    },
+    {
+      "faithfulness": 0.83,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "explanation omits factors with negative SHAP impact, such as InterestRate and Income, which decrease risk",
+      "row_index": 15636,
+      "audience": "customer",
+      "predicted_probability": 0.6919171810150146,
+      "generated_explanation": "Given your predicted default probability of 69.2%, which is significantly higher than the average, we've identified a few key factors that contribute to this assessment. Your age of 22 years and relatively short employment history of 13 months are significant factors that increase your risk. Additionally, the loan amount of 193,116 that you've requested also plays a role in this higher risk assessment. To improve your chances in future applications, you may want to consider building a longer employment history and exploring options for smaller loan amounts."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "Explanation omits factors with negative SHAP impact, such as InterestRate and Income, which decrease risk.",
+      "row_index": 15636,
+      "audience": "analyst",
+      "predicted_probability": 0.6919171810150146,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- Age = 22.0 years, increased risk\n- MonthsEmployed = 13.0 months, increased risk\n- LoanAmount = 193116.0, increased risk\n- CreditScore = 323.0, increased risk\nRecommendation: Reject loan due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation does not mention InterestRate and Age, which have a negative SHAP impact, and also mentions 'high school education level' as a risk factor, while the SHAP data only provides its value without implying it's a concern by itself, but overall explanation is mostly faithful to the data.",
+      "row_index": 19608,
+      "audience": "customer",
+      "predicted_probability": 0.6725335717201233,
+      "generated_explanation": "Given your predicted default probability of 67.3%, which is significantly higher than the average, there are a few key factors that are increasing your risk. Your annual income of 22,219 is one of the main concerns, as it appears to be contributing to a higher risk. Additionally, being unemployed and having a high school education level are also factors that are increasing your risk. To improve your chances in future applications, you may want to consider exploring ways to increase your income and seeking employment."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 19608,
+      "audience": "analyst",
+      "predicted_probability": 0.6725335717201233,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- Income = 22219.0, increases risk\n- EmploymentType = Unemployed, increases risk\n- HasDependents = No, increases risk\n- Education = High School, increases risk\nRecommendation: Reject application"
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 0.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "The explanation incorrectly states that age, employment history, and credit score are positive factors, when in fact they decrease the predicted default probability according to the SHAP data.",
+      "row_index": 32526,
+      "audience": "customer",
+      "predicted_probability": 0.12393391877412796,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 12.4%, which is still below average. Several factors are working in your favor, including your age of 61 years and your long employment history of 117 months, both of which suggest stability. Additionally, your credit score of 772 is also a positive factor, indicating a good credit history."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 32526,
+      "audience": "analyst",
+      "predicted_probability": 0.12393391877412796,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 12.4%.\nRisk Drivers:\n- Age = 61.0 years, decreases risk\n- MonthsEmployed = 117.0 months, decreases risk\n- CreditScore = 772.0, decreases risk\n- LoanPurpose = Home, decreases risk\n- LoanAmount = 170226.0, increases risk\n- Education = High School, increases risk\nRecommendation: \nReject or further review the loan application."
+    },
+    {
+      "faithfulness": 0.83,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation omits factors with negative SHAP impact, such as Age and InterestRate, which decrease risk.",
+      "row_index": 10681,
+      "audience": "customer",
+      "predicted_probability": 0.7675677537918091,
+      "generated_explanation": "Given your predicted default probability of 76.8%, which is significantly higher than the average, there are a few key factors that are increasing your risk. Your annual income of 20259.0 is one factor, as well as the loan amount of 203067.0 you've requested. Additionally, your credit score of 321.0 and being unemployed are also contributing to this higher risk. To improve your chances in the future, you may want to consider exploring ways to increase your income or reducing the amount you're looking to borrow."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 10681,
+      "audience": "analyst",
+      "predicted_probability": 0.7675677537918091,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 76.8%.\nRisk Drivers:\n- Income = 20259.0, increased risk\n- LoanAmount = 203067.0, increased risk\n- Age = 47.0, decreased risk\n- CreditScore = 321.0, increased risk\n- EmploymentType = Unemployed, increased risk\n- InterestRate = 10.71, decreased risk\nRecommendation: \nReject the loan application due to high predicted default risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 31355,
+      "audience": "customer",
+      "predicted_probability": 0.4005359709262848,
+      "generated_explanation": "For your loan application, we considered several factors that influenced our decision. Your age of 60 years and interest rate of 10.22% are working in your favor, as they decrease the risk. However, your annual income of 26249 and the loan amount of 218449 you've requested are factors that increase the risk. Additionally, your credit score of 369 also contributes to a higher risk, but it's worth noting that your stated purpose of the loan is for a home, which slightly decreases the risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 31355,
+      "audience": "analyst",
+      "predicted_probability": 0.4005359709262848,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- Age = 60.0 years, decreases risk\n- Income = 26249.0, increases risk\n- LoanAmount = 218449.0, increases risk\n- InterestRate = 10.22, decreases risk\n- CreditScore = 369.0, increases risk\n- LoanPurpose = Home, decreases risk\nRecommendation: Reject loan application"
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation omits factors that increase risk, such as Income, and also does not mention other factors like InterestRate and HasDependents.",
+      "row_index": 19485,
+      "audience": "customer",
+      "predicted_probability": 0.19378651678562164,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 19.4%, which is still above the base default rate. Two factors that contribute to your application's strength are your loan amount of 33972.0 and your age of 56.0, both of which decrease the risk. Additionally, your full-time employment status also helps decrease the risk, suggesting a stable income source."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 19485,
+      "audience": "analyst",
+      "predicted_probability": 0.19378651678562164,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- LoanAmount = 33972.0, decreases risk\n- Age = 56.0, decreases risk\n- Income = 22450.0, increases risk\nRecommendation: Monitor closely"
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 0.8,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "Explanation incorrectly states that high credit score decreases risk, when in fact it has a negative SHAP impact, and also incorrectly implies that loan amount decreases risk, when it actually has a negative SHAP impact indicating it decreases risk, which is correct but the explanation of credit score is incorrect.",
+      "row_index": 9612,
+      "audience": "customer",
+      "predicted_probability": 0.19630278646945953,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 19.6%, which is still above the base default rate. This is likely due in part to your relatively short employment history, with only 8 months on record. On the other hand, factors such as your loan amount and age seem to be working in your favor, as they decrease your risk. Additionally, your high credit score is also a positive factor in your application."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 9612,
+      "audience": "analyst",
+      "predicted_probability": 0.19630278646945953,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 19.6%.\nRisk Drivers:\n- LoanAmount = 14094.0, decreases risk\n- Age = 54.0, decreases risk\n- MonthsEmployed = 8.0, increases risk\n- CreditScore = 814.0, decreases risk\n- EmploymentType = Full-time, decreases risk\n- HasDependents = Yes, decreases risk\nRecommendation: \nCarefully review the application."
+    },
+    {
+      "faithfulness": 0.83,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation does not mention the LoanAmount feature, which has a positive SHAP impact, and also does not mention the DTIRatio feature.",
+      "row_index": 47768,
+      "audience": "customer",
+      "predicted_probability": 0.14748039841651917,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 14.7%, which is still below average. Factors that contribute to the strength of your application include your stable employment history, as shown by 96 months of employment on record, and your high credit score of 827. Additionally, your age of 64 and annual income of $67,997 also decrease your risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 47768,
+      "audience": "analyst",
+      "predicted_probability": 0.14748039841651917,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 14.7%.\nRisk Drivers:\n- Age = 64.0 years, decreases risk\n- MonthsEmployed = 96.0 months, decreases risk\n- CreditScore = 827.0, decreases risk\n- Income = 67997.0, decreases risk\n- LoanAmount = 183607.0, increases risk\n- DTIRatio = 0.14, decreases risk\nRecommendation: \nReject or further review the loan application."
+    },
+    {
+      "faithfulness": 0.83,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation does not mention the 'Age' factor, which has a significant negative SHAP impact, and incorrectly implies that all factors mentioned are increasing risk, when in fact 'Age' decreases risk.",
+      "row_index": 5894,
+      "audience": "customer",
+      "predicted_probability": 0.7600304484367371,
+      "generated_explanation": "Given your predicted default probability of 76.0%, which is significantly higher than the average, we've identified a few key factors that are increasing your risk. Your loan amount of 209980.0, credit score of 300.0, and interest rate of 19.2% are all contributing to this higher risk. Additionally, your annual income of 35821.0 and being unemployed are also factors in this assessment. To improve your chances in future applications, you may want to consider exploring options to reduce your loan amount or improving your credit score."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 5894,
+      "audience": "analyst",
+      "predicted_probability": 0.7600304484367371,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- LoanAmount = 209980.0, increases risk\n- CreditScore = 300.0, increases risk\n- InterestRate = 19.2, increases risk\n- Income = 35821.0, increases risk\n- EmploymentType = Unemployed, increases risk\n- Age = 69.0, decreases risk\nRecommendation: Reject loan application due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation does not mention all factors present in the SHAP data, such as InterestRate and LoanPurpose, and also omits HasDependents which has a positive SHAP impact.",
+      "row_index": 51059,
+      "audience": "customer",
+      "predicted_probability": 0.18422247469425201,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 18.4%, which is still above the base default rate. A few factors are working in your favor, including your age, which is 58 years, and your annual income of 121,327, both of which decrease your risk. Additionally, having a co-signer for the loan also helps to decrease your risk."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 51059,
+      "audience": "analyst",
+      "predicted_probability": 0.18422247469425201,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- Age = 58.0 years, decreases risk\n- InterestRate = 8.28%, decreases risk\n- Income = 121327.0, decreases risk\n- LoanPurpose = Home, decreases risk\n- HasDependents = No, increases risk\n- HasCoSigner = Yes, decreases risk\nRecommendation: Reject loan application"
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "explanation omits factors that decrease risk, such as Income and Education, and also omits InterestRate which increases risk",
+      "row_index": 49393,
+      "audience": "customer",
+      "predicted_probability": 0.7502087950706482,
+      "generated_explanation": "Given your predicted default probability of 75.0%, we've identified a few key factors that are increasing your risk. Your age of 24 years and relatively short employment history of 26 months are significant factors in this assessment. Additionally, the loan amount of 198569 that you've requested also contributes to the increased risk. To improve your chances in future applications, you may want to consider reducing the loan amount you request or waiting until you have a longer employment history."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "Explanation omits factors with negative SHAP impact, such as Income and Education, which decrease risk.",
+      "row_index": 49393,
+      "audience": "analyst",
+      "predicted_probability": 0.7502087950706482,
+      "generated_explanation": "Verdict: High risk\nRisk Drivers:\n- Age = 24.0 years, increased risk\n- MonthsEmployed = 26.0 months, increased risk\n- LoanAmount = 198569.0, increased risk\n- InterestRate = 17.05, increased risk\nRecommendation: Reject loan application due to high predicted default probability."
+    },
+    {
+      "faithfulness": 0.8,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "The explanation omits some factors present in the SHAP data, such as LoanAmount, HasCoSigner, and NumCreditLines.",
+      "row_index": 45435,
+      "audience": "customer",
+      "predicted_probability": 0.08741236478090286,
+      "generated_explanation": "Your loan application appears relatively strong, with a predicted default probability of 8.7%, which is still above the base default rate. Factors that are working in your favor include your age, 59 years, and the interest rate of 5.8%, both of which decrease your risk. Additionally, having a full-time employment status also contributes to a lower risk assessment."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 45435,
+      "audience": "analyst",
+      "predicted_probability": 0.08741236478090286,
+      "generated_explanation": "Verdict:\nHigh risk, with an 8.7% default probability.\nRisk Drivers:\n- Age = 59.0 years, decreased risk\n- InterestRate = 5.8%, decreased risk\n- LoanAmount = 53794.0, decreased risk\n- EmploymentType = Full-time, decreased risk\n- HasCoSigner = Yes, decreased risk\n- NumCreditLines = 1.0, decreased risk\nRecommendation: \nMonitor closely due to high predicted default probability."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 0.9,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 29824,
+      "audience": "customer",
+      "predicted_probability": 0.0727464109659195,
+      "generated_explanation": "I'm happy to discuss your loan application with you. Your predicted default probability is 7.3%, which is higher than the average default rate, but there are several factors working in your favor. Your age of 69 years, full-time employment status, and annual income of 147,514 are all positive factors that decrease your risk. Additionally, your long employment history of 79 months and having a co-signer also contribute to a lower risk assessment."
+    },
+    {
+      "faithfulness": 1.0,
+      "direction_correctness": 1.0,
+      "clarity": 1.0,
+      "consistency": 1.0,
+      "issues_found": "none",
+      "row_index": 29824,
+      "audience": "analyst",
+      "predicted_probability": 0.0727464109659195,
+      "generated_explanation": "Verdict:\nHigh risk, with a predicted default probability of 7.3% (above the base rate of 1.6%).\nRisk Drivers:\n- Age = 69.0 years, decreases risk\n- EmploymentType = Full-time, decreases risk\n- Income = 147514.0, decreases risk\n- MonthsEmployed = 79.0, decreases risk\n- LoanAmount = 103730.0, decreases risk\n- HasCoSigner = Yes, decreases risk\nRecommendation: \nMonitor this loan closely."
+    }
+  ]
+}
