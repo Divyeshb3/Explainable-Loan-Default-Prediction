@@ -1,13 +1,26 @@
-
+# Virtual Environment
 venv/
 
+# Python Cache
 __pycache__/
 *.pyc
 
+# Environment Variables
 .env
 
-data/
-
+# Streamlit Secrets
 .streamlit/secrets.toml
 
-shap_values.npy
+# Dataset (optional if too large or private)
+data/
+
+# Large SHAP output
+outputs/shap_values.npy
+
+# IDE
+.vscode/
+.idea/
+
+# Operating System
+.DS_Store
+Thumbs.db
