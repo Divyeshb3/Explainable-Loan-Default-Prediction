@@ -49,6 +49,10 @@ SYSTEM_PROMPTS = {
         "never imply the opposite. Mention each factor only once and do not restate "
         "the same factor using different wording. "
 
+        "CRITICAL: The applicant's actual risk tier and prediction are GIVEN to you as "
+        "ground truth in the prompt. Never infer, recalculate, or state a different "
+        "verdict than the one given, even if the individual SHAP factors seem mixed."
+
         "If the predicted default probability is high (roughly above 50%), explain only "
         "the top 2-3 factors increasing the applicant's risk and suggest practical ways "
         "to improve future applications. "
@@ -68,6 +72,11 @@ SYSTEM_PROMPTS = {
         "Always cite the applicant's ACTUAL VALUE for every factor you mention, "
         "not just the feature name (for example: 'Age = 18 years' instead of "
         "'age-related risk'). "
+
+        "CRITICAL: The applicant's actual risk tier and prediction are GIVEN to you as "
+        "ground truth in the prompt under 'Verdict (ground truth)'. The 'Verdict:' line "
+        "in your response MUST state this exact given value, never a recalculated or "
+        "inferred one, even if the individual SHAP factors seem mixed. "
 
         "Respond using exactly this structure:\n\n"
         "Verdict:\n"
@@ -93,6 +102,8 @@ def build_user_prompt(explanation: dict) -> str:
         
         f"Predicted default probability: {proba:.1%}",
         f"Base (average) default rate: {explanation['base_value']:.1%}",
+        f"Verdict (ground truth, state exactly as given): {explanation.get('actual_risk_tier', 'N/A')} "
+        f"— model prediction: {explanation.get('actual_prediction', 'N/A')}",
         "",
         "IMPORTANT:",
         "- Explain only this applicant.",
