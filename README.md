@@ -7,6 +7,8 @@ color-coded risk tiers, a downloadable PDF prediction report, and an independent
 evaluated explanation-quality score.
 
 **Live demo:** [Streamlit Community Cloud](https://explainable-loan-default-prediction-kjbtysmspmtadqzuf8ude7.streamlit.app/)
+## 🎥 Project Demo
+https://github.com/user-attachments/assets/a8ca5c24-d1ae-4016-a174-9d890a4af4b4
 
 ## Features
 - XGBoost default-risk prediction with class-imbalance handling
