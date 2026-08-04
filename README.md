@@ -2,7 +2,19 @@
 
 Predicts loan default risk with XGBoost, explains *why* using SHAP, and translates
 those SHAP values into plain-English explanations using an LLM (Groq / LLaMA 3.3 70B) —
-one version for the applicant, one for a risk analyst.
+one version for the applicant, one for a risk analyst, plus a combined view. Includes
+color-coded risk tiers, a downloadable PDF prediction report, and an independently
+evaluated explanation-quality score.
+
+**Live demo:** [Streamlit Community Cloud](https://explainable-loan-default-prediction-kjbtysmspmtadqzuf8ude7.streamlit.app/)
+
+## Features
+- XGBoost default-risk prediction with class-imbalance handling
+- Per-prediction SHAP explainability (not just global feature importance)
+- Dual-audience LLM narration: customer, analyst, or both side-by-side
+- Color-coded risk tiers (🟢 low / 🟡 medium / 🔴 high)
+- Downloadable PDF prediction report (ReportLab)
+- Independent LLM-as-judge evaluation of explanation quality
 
 ## Dataset
 `data/Loan_default.csv` — 255,347 rows, 18 columns (Kaggle: nikhil1e9/loan-default).
@@ -63,18 +75,19 @@ modes on faithfulness, direction correctness, clarity, and consistency.
 
 | Metric | Customer explanation | Analyst explanation | Overall |
 |---|---|---|---|
-| Faithfulness | 0.826 | 0.976 | 0.901 |
-| Direction correctness | 0.880 | 1.000 | 0.940 |
-| Clarity | 0.904 | 0.980 | 0.942 |
+| Faithfulness | 0.789 | 1.000 | 0.894 |
+| Direction correctness | 0.904 | 0.993 | 0.949 |
+| Clarity | 0.896 | 0.996 | 0.946 |
 | Consistency | 1.000 | 1.000 | 1.000 |
 
-**Key finding:** consistency was perfect across all 50 evaluations — no internal
-contradictions were found in any generated explanation. The gap in customer-facing
-faithfulness (0.826 vs 0.976 for analyst) comes almost entirely from deliberate
-*omission* rather than fabrication: the customer prompt is constrained to 3-4 plain-
-language sentences, so it selectively surfaces the top 2-3 factors rather than every
-SHAP contributor, by design. No hallucinated (fabricated) reasons were found in either
-audience mode.
+**Key finding:** after a fix grounding the LLM's stated verdict in the model's actual
+output (rather than letting it infer a verdict from the SHAP factor list alone),
+analyst-facing faithfulness reached a perfect 1.000 and direction correctness stayed
+near-perfect (0.993). Consistency remained perfect (1.000) across all 50 evaluations
+both before and after the fix — no internal contradictions were found. Customer-facing
+faithfulness (0.789) continues to reflect deliberate omission rather than fabrication:
+the customer prompt is constrained to 3-4 plain-language sentences, so it selectively
+surfaces the top factors rather than every SHAP contributor, by design.
 
 ## Architecture
 ```
